@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
-  get 'tasks/new'
-  get 'tasks/create'
-  get 'tasks', to: "tasks#index"
-  get 'tasks/:id', to: "tasks#show"
+  resources :tasks
+  resources :tags
+  resources :related_links
+
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end
